@@ -31,7 +31,8 @@
 <script type="text/javascript">
     $j(document).on('product-media-loaded', function() {
         ConfigurableMediaImages.init('<?php echo $this->getImageType(); ?>');
-        <?php foreach ($this->getProductImageFallbacks() as $imageFallback): ?>
+        <?php $keepFrame = ($this->getRequest()->getControllerName() !== 'product') ?>
+		<?php foreach ($this->getProductImageFallbacks($keepFrame) as $imageFallback): ?>
         ConfigurableMediaImages.setImageFallback(<?php echo $imageFallback['product']->getId(); ?>, $j.parseJSON('<?php echo $imageFallback['image_fallback']; ?>'));
         <?php endforeach; ?>
         $j(document).trigger('configurable-media-images-init', ConfigurableMediaImages);
