@@ -26,7 +26,19 @@
  */
 -->
 <layout version="0.1.0">
-
+    
+    <default>
+        <reference name="head">
+            <action method="addJs"><script>lib/jquery/jquery-1.10.2.min.js</script></action>
+            <action method="addJs"><script>lib/jquery/noconflict.js</script></action>
+            <action method="addItem"><type>skin_js</type><name>js/configurableswatches/modernizr.custom.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/configurableswatches/script.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/configurableswatches/imagesloaded.js</name></action>
+            <action method="addCss"><stylesheet>css/configurableswatches.css</stylesheet></action>
+            <action method="addItem"><type>skin_js</type><name>js/configurableswatches/swatches-product.js</name></action>
+        </reference>
+    </default>
+    
     <product_list>
         <reference name="head">
             <action method="addItem"><type>skin_js</type><name>js/configurableswatches/product-media.js</name></action>

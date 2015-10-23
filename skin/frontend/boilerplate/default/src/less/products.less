@@ -213,6 +213,22 @@
       &:extend(.img-thumbnail);
     }
 
+    .product-image {
+      position: relative;
+
+      .gallery-image {
+        display: none;
+
+        &.visible {
+          display: block;
+
+          &.hidden {
+            visibility:hidden;
+          }
+        }
+      }
+    }
+
     .more-views ul {
       .make-row();
 

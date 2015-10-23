@@ -1,36 +1,7 @@
 <?xml version="1.0"?>
 <layout>
 
-    <default>
-
-        <reference name="head">
-
-                <action method="addJs"><script>lib/jquery/jquery-1.10.2.min.js</script></action>
-                <action method="addJs"><script>lib/jquery/noconflict.js</script></action>
-
-                <action method="addItem"><type>skin_js</type><name>js/lib/modernizr.custom.min.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/lib/selectivizr.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/lib/matchMedia.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/lib/matchMedia.addListener.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/lib/enquire.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/app.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.min.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.swipe.min.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/slideshow.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name></action>
-        <action method="addItem"><type>skin_js</type><name>js/minicart.js</name></action>
-
-        </reference>
-
-    </default>
-
     <catalog_product_view>
-
-        <reference name="head">
-
-            <action method="addItem"><type>skin_js</type><script>js/lib/elevatezoom/jquery.elevateZoom-3.0.8.min.js</script></action>
-
-        </reference>
 
         <reference name="product.info.media">
 

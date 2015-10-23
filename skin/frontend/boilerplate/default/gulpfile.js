@@ -74,7 +74,13 @@ gulp.task('js', function() {
     'bower_components/bootstrap/js/carousel.js',
     'bower_components/bootstrap/js/dropdown.js',
     'bower_components/bootstrap/js/modal.js',
-    'src/js/script.js'
+    'src/js/script.js',
+    'src/js/configurableswatches/modernizr.custom.min.js',
+    'src/js/configurableswatches/script.js',
+    'src/js/configurableswatches/imagesloaded.js',
+    'src/js/configurableswatches/swatches-product.js',
+    'src/js/configurableswatches/product-media.js',
+    'src/js/configurableswatches/swatches-list.js'
   ];
 
   if (config.appendLiveReload === true) {

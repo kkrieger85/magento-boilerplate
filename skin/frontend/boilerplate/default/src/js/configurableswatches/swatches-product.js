@@ -19,7 +19,7 @@
  *
  * @category    design
  * @package     rwd_default
- * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 
@@ -458,12 +458,15 @@ Product.ConfigurableSwatches.prototype = {
         if ((this._O.selectFirstOption && !this._F.firstOptionSelected) ||
             (this._F.hasPresetValues && !this._F.presetValuesSelected) ||
             (!windowLoaded)) {
-            Event.observe(window, 'load', function() {
+
+//            Event.observe(window, 'load', function() { //change this for quicview work fine
+
                 window.setTimeout(function() {
                     this.updateSelect( attr );
                     this._F.firstOptionSelected = true;
                 }.bind(this), 200);
-            }.bind(this));
+
+//            }.bind(this));
         } else {
             this.updateSelect(attr);
             this._F.firstOptionSelected = true;

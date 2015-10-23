@@ -40,20 +40,22 @@ $helper  = $this->helper('catalog/output');
 ?>
 
 <div class="product-image product-image-zoom">
-    <img id="image-main"
-         class="gallery-image visible"
-         src="<?php echo $this->helper('catalog/image')->init($product, 'image') ?>"
-         alt="<?php echo $this->htmlEscape($this->getImageLabel()) ?>"
-         title="<?php echo $this->htmlEscape($this->getImageLabel()); ?>" />
+    <div class="product-image-gallery">
+        <img id="image-main"
+             class="gallery-image visible"
+             src="<?php echo $this->helper('catalog/image')->init($product, 'image') ?>"
+             alt="<?php echo $this->htmlEscape($this->getImageLabel()) ?>"
+             title="<?php echo $this->htmlEscape($this->getImageLabel()); ?>" />
 
-    <?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
-        <?php if ($this->isGalleryImageVisible($_image)): ?>
-        <img id="image-<?php echo $i; ?>"
-             class="gallery-image"
-             src="<?php echo $this->getGalleryImageUrl($_image); ?>"
-             data-zoom-image="<?php echo  $this->getGalleryImageUrl($_image); ?>" />
-        <?php endif; ?>
-    <?php $i++; endforeach; ?>
+        <?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
+            <?php if ($this->isGalleryImageVisible($_image)): ?>
+            <img id="image-<?php echo $i; ?>"
+                 class="gallery-image"
+                 src="<?php echo $this->getGalleryImageUrl($_image); ?>"
+                 data-zoom-image="<?php echo  $this->getGalleryImageUrl($_image); ?>" />
+            <?php endif; ?>
+        <?php $i++; endforeach; ?>
+    </div>
 </div>
 
 <?php if (count($this->getGalleryImages()) > 0): ?>
